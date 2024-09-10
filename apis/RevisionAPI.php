@@ -1,6 +1,8 @@
 <?php
 
-namespace Api;
+namespace Apis;
+
+require 'vendor/autoload.php';
 
 use DateTime;
 use Eluceo\iCal\Domain\Entity\Calendar;
@@ -12,7 +14,7 @@ use Eluceo\iCal\Presentation\Factory\CalendarFactory;
 
 use Models\Revision;
 
-require 'vendor/autoload.php';
+
 class RevisionAPI {
 	public function calendrier(): void {
 		$calendrier = new Calendar();
