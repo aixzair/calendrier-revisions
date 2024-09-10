@@ -1,0 +1,15 @@
+{% extends 'composants/parent.html.twig' %}
+
+{% block titre %}
+    Programme d'une révision
+{% endblock %}
+
+{% block content %}
+    <h1>Programme</h1>
+
+    {% for revision in revisions %}
+        <h2>{{ revision.nom }} : {{ revision.j }}</h2>
+        <p>{{ revision.debut }}</p>
+        <br>
+    {% endfor %}
+{% endblock %}

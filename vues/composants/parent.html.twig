@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>{% block titre %}Parent{% endblock%}</title>
+</head>
+<body>
+    <div>
+        {% for erreur in erreurs %}
+            <p>{{erreur}}</p>
+        {% endfor %}
+    </div>
+    {% block content %}
+        Contenu du body
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'composants/parent.html.twig' %}
+
+{% block titre %}
+    Créer une révision
+{% endblock %}
+
+{% block content %}
+    <h1>Créer une révision</h1>
+
+    <form action="createPost" method="post">
+        <!-- Nom -->
+        <div>
+            <label for="nom">Nom de la révision :</label>
+            <input type="text" name="nom" required>
+        </div>
+
+        <!-- Date début -->
+        <div>
+            <label for="debut">Date début :</label>
+            <input type="date" id="debut" name="debut" required>
+        </div>
+
+        <div>
+            <button type="submit">Créer</button>
+        </div>
+    </form>
+{% endblock %}
