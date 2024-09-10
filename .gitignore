@@ -1,0 +1,8 @@
+# Ignorer le fichier .env
+.env
+
+# Ignorer le dossier .idea (configuration de PhpStorm/IDE)
+.idea/
+
+# Ignorer le fichier composer.lock
+composer.lock
