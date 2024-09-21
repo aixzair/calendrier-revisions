@@ -16,6 +16,10 @@ Dotenv::createImmutable(__DIR__)->load();
 
 // Ajoute les routes
 $dispatcher = FastRoute\simpleDispatcher(function(RouteCollector $r) {
+	// Home
+	$r->addRoute('GET', '/', [new RevisionController(), 'create']);
+
+	// Revision
 	$r->addGroup('/revision', function (RouteCollector $r) {
 		$r->addRoute('GET', '/create', [new RevisionController(), 'create']);
 		$r->addRoute('POST', '/createPost', [new RevisionController(), 'createPost']);
